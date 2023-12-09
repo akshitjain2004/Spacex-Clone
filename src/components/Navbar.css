@@ -1,0 +1,65 @@
+body {
+  background-color: #1a1a1a;
+  color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: white;
+}
+
+svg {
+  fill: white;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 40px;
+}
+header svg {
+  width: 190px;
+}
+
+header a.logo {
+  margin-right: 40px;
+}
+.center-nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+
+  font-size: 14px;
+  padding: 0px 13px;
+}
+
+.right-nav {
+  position: fixed;
+  right: 0;
+  top: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.right-nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0px 50px;
+  
+}
+
+.btn-nav {
+  position: absolute;
+  right: 0;
+  top: -7px;
+  padding: 20px;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  transform: rotate(90deg);
+}
