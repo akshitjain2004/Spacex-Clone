@@ -27,13 +27,18 @@ header svg {
 
 header a.logo {
   margin-right: 40px;
+  z-index: 500;
 }
 .center-nav a {
   text-transform: uppercase;
   text-decoration: none;
-
   font-size: 14px;
   padding: 0px 13px;
+
+}
+
+.center-nav{
+  z-index: 500;
 }
 
 .right-nav {
@@ -43,6 +48,7 @@ header a.logo {
   height: 40px;
   display: flex;
   align-items: center;
+  z-index: 500;
 }
 
 .right-nav a {
@@ -50,6 +56,7 @@ header a.logo {
   text-decoration: none;
   font-size: 14px;
   padding: 0px 50px;
+
   
 }
 
@@ -63,3 +70,4 @@ header a.logo {
   border: 0;
   transform: rotate(90deg);
 }
+
