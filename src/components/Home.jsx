@@ -9,7 +9,7 @@ const Home = () => {
         <div className="home-content">
     <h3>RECENT LAUNCH</h3>
     <h2>STARSHIP SECOND FLIGHT TEST</h2>
-    <a href="/"><button>Watch Now</button></a>
+    <a href="/">Watch Now</a>
         </div>
     </section>
   )

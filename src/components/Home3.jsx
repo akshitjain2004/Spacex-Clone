@@ -1,10 +1,10 @@
-import bg2 from "../assets/32654666113_26d09b05a3_k.jpg";
+import bg3 from "../assets/2.jpg";
 
-const Home2 = () => {
+const Home3 = () => {
   return (
     <section
       style={{
-        backgroundImage: `url(${bg2})`,
+        backgroundImage: `url(${bg3})`,
         // backgroundImage: `url(${externalImage})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -13,14 +13,14 @@ const Home2 = () => {
       }}
     >
       <div className="home-content">
-        <h3>2</h3>
-        <h2>STARSHIP SECOND FLIGHT TEST</h2>
+        <h3>UPCOMING LAUNCH</h3>
+        <h2>SARAH-2 MISSION</h2>
         <a href="/">
-          <button>Watch Now</button>
+        Watch
         </a>
       </div>
     </section>
   );
 };
 
-export default Home2;
+export default Home3;

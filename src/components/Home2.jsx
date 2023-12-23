@@ -1,4 +1,4 @@
-import bg2 from "../assets/32654666113_26d09b05a3_k.jpg";
+import bg2 from "../assets/1.jpg";
 
 const Home2 = () => {
   return (
@@ -13,10 +13,10 @@ const Home2 = () => {
       }}
     >
       <div className="home-content">
-        <h3>2</h3>
-        <h2>STARSHIP SECOND FLIGHT TEST</h2>
+        <h3>UPCOMING LAUNCH</h3>
+        <h2>STARLINK MISSION</h2>
         <a href="/">
-          <button>Watch Now</button>
+          LEARN MORE
         </a>
       </div>
     </section>
