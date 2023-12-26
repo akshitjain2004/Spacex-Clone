@@ -4,8 +4,11 @@ const Home3 = () => {
   return (
     <section
       style={{
-        backgroundImage: `url(${bg3})`,
+       backgroundImage: `url(${bg3})`,
+      
+      
         // backgroundImage: `url(${externalImage})`,
+       
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
