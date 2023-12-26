@@ -12,12 +12,12 @@ const Home2 = () => {
         height: "500px",
       }}
     >
-      <div className="home-content">
-        <h3>UPCOMING LAUNCH</h3>
-        <h2>STARLINK MISSION</h2>
-        <a href="/">
-          LEARN MORE
-        </a>
+      <div className="content-outer">
+        <div className="home-content">
+          <h3>UPCOMING LAUNCH</h3>
+          <h2>STARLINK MISSION</h2>
+          <a href="/">LEARN MORE</a>
+        </div>
       </div>
     </section>
   );

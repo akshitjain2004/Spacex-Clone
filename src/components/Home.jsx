@@ -1,5 +1,6 @@
 import videoBg from "../assets/x2mate.com-NASA's Mars 2020 Perseverance Rover Landing Animations-(1080p60).mp4"
 import "./Home.css"
+
 const Home = () => {
   return (
 <section>

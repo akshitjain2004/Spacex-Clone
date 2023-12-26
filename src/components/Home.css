@@ -1,10 +1,14 @@
+
 section {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   position: relative;
+  display: flex;
+  align-items: flex-end;
 }
+
 
 .home-bg {
   width: 100%;
@@ -14,11 +18,17 @@ section {
   z-index: 500;
 }
 
+section div.content-outer{
+  flex-grow: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+}
 section div.home-content {
   position: absolute;
-  bottom: 15%;
+  bottom: 15vh;
   left: 50px;
-  max-width: 260px;
+  max-width: 360px;
 }
 
 section div.home-content h2 {
