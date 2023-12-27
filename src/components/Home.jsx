@@ -7,10 +7,12 @@ const Home = () => {
   <div className="video-container">
     <video src={videoBg} autoPlay loop muted  width="1280" height="720"></video>
   </div>
+  <div className="content-outer">
         <div className="home-content">
     <h3>RECENT LAUNCH</h3>
     <h2>STARSHIP SECOND FLIGHT TEST</h2>
     <a href="/">Watch Now</a>
+        </div>
         </div>
     </section>
   )

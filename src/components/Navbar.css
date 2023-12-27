@@ -1,7 +1,9 @@
 body {
   background-color: black;
   color: white;
+  font-family: D-DIN-Bold;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -25,22 +27,48 @@ header {
   z-index: 1;
 }
 header svg {
-  width: 190px;
+  width: 140px;
 }
 
 header a.logo {
-  margin-right: 40px;
-  z-index: 500;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  margin-left: -70px;
 }
-.center-nav a {
+@media (min-width: 1000px) {
+  header svg {
+    width: 200px;
+  }
+  header a.logo {
+    margin-right: 40px;
+    position: relative;
+    top: initial;
+    left: initial;
+    margin-left: initial;
+  }
+}
+
+.center-nav {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .center-nav {
+    display: block;
+  }
+}
+.center-nav a,
+.right-nav a {
   text-transform: uppercase;
   text-decoration: none;
   font-size: 14px;
-  padding: 0px 13px;
-
+  margin: 0 13px;
+  padding: 0;
+  position: relative;
 }
 
-.center-nav{
+.center-nav {
   z-index: 500;
 }
 
@@ -55,14 +83,33 @@ header a.logo {
 }
 
 .right-nav a {
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 14px;
-  padding: 0px 50px;
-
-  
+  display: none;
+}
+@media (min-width: 1000px) {
+  .right-nav a {
+    display: inline-block;
+    padding: 0;
+    margin: 0 50px;
+  }
+}
+.center-nav a::before,
+.right-nav a::before {
+  content: "";
+  width: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  transition: width 0.2s linear;
 }
 
+.center-nav a:hover::before,
+.right-nav a:hover::before {
+  left: 0;
+  right: initial;
+  width: 100%;
+}
 .btn-nav {
   position: absolute;
   right: 0;
@@ -71,6 +118,57 @@ header a.logo {
   color: white;
   background-color: transparent;
   border: 0;
-  transform: rotate(90deg);
+  cursor: pointer;
 }
 
+nav.mobile-nav {
+  padding-top: 70px;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: -280px;
+  bottom: 0;
+  z-index: 2;
+  background-color: black;
+  width: 280px;
+  transition: right 0.3s ease-in-out;
+}
+nav.mobile-nav.active {
+  right: 0;
+}
+nav.mobile-nav a {
+  display: block;
+  opacity: 0;
+  border-bottom: 1px solid #222;
+  text-transform: uppercase;
+  padding: 16px 25px;
+  text-decoration: none;
+  text-align: right;
+  transition: opacity .3s linear;
+  transition-delay: .3s;
+}
+
+nav.mobile-nav.active a{
+  opacity: 1;
+}
+.btn-nav span {
+  display: block;
+  width: 16px;
+  margin: 2px 0px 2px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  transition: all 0.2s linear ;
+}
+.btn-nav.active span:first-child,
+.btn-nav.active span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.btn-nav.active span:nth-child(2) {
+  transform: rotate(-45deg);
+  top:-4px;
+}
+.btn-nav.active span:last-child {
+  opacity: 0;
+}

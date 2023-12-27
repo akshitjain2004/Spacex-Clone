@@ -1,5 +1,18 @@
 import "./Navbar.css";
 const Navbar = () => {
+  let isActive = false;
+  function toggle() {
+    if (isActive) {
+      document.querySelector(".btn-nav").classList.remove("active");
+      document.querySelector('.mobile-nav').classList.remove('active');
+      isActive = false;
+    } else {
+      document.querySelector(".btn-nav").classList.add("active");
+      document.querySelector('.mobile-nav').classList.add('active');
+      isActive = true;
+    }
+  }
+
   return (
     <header>
       <a href="" className="logo">
@@ -74,7 +87,21 @@ const Navbar = () => {
       </nav>
       <nav className="right-nav">
         <a href="">Shop</a>
-        <button className="btn-nav">|||</button>
+        <button className="btn-nav" onClick={toggle}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <nav className="mobile-nav">
+        <a href="">Falcon 9</a>
+        <a href="">Falcon Heavy</a>
+        <a href="">Dragon</a>
+        <a href="">Starship</a>
+        <a href="">Human spaceflight</a>
+        <a href="">Rideshare</a>
+        <a href="">Startlink</a>
+        <a href="">Shop</a>
       </nav>
     </header>
   );
